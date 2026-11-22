@@ -8,6 +8,12 @@ def greet(name: str = "world") -> str:
     return f"hello, {name}"
 
 
+def farewell(name: str = "world") -> str:
+    """Return a farewell for ``name``."""
+    name = name.strip() or "world"
+    return f"goodbye, {name}"
+
+
 def main(argv: list[str] | None = None) -> int:
     args = sys.argv[1:] if argv is None else argv
     print(greet(args[0] if args else "world"))
