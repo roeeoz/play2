@@ -9,7 +9,7 @@ def greet(name: str = "world") -> str:
 
 
 def farewell(name: str = "world") -> str:
-    """Return a farewell for ``name``."""
+    """Return a farewell for ``name``; a blank name becomes "world"."""
     name = name.strip() or "world"
     return f"goodbye, {name}"
 
